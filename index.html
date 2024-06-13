@@ -1,0 +1,17 @@
+import datetime
+
+# تاريخ البداية والنهاية
+start_date = datetime.datetime(2024, 6, 13)
+end_date = datetime.datetime(2024, 6, 16)
+
+# حساب الفروق بين التواريخ
+time_remaining = end_date - datetime.datetime.now()
+
+# استخراج الأيام والساعات والدقائق والثواني
+days = time_remaining.days
+hours, remainder = divmod(time_remaining.seconds, 3600)
+minutes, seconds = divmod(remainder, 60)
+
+# عرض العد التنازلي
+print(f"العد التنازلي حتى {end_date}:")
+print(f"{days} أيام، {hours} ساعات، {minutes} دقائق، {seconds} ثواني")
